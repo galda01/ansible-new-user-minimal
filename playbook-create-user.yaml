@@ -5,6 +5,4 @@
 
   tasks:
 
-  - user: name="{{users}}" comment="My User {{users}}"
-    with_items:
-      - sally
+  - user: name="sally" comment="My User"
