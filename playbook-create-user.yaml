@@ -3,6 +3,15 @@
 
   become: true
 
+  vars:
+    users:
+    - sally
+    - kym
+    - sam
+    - ben
+
   tasks:
 
-  - user: name=myuser comment="My User"
+  - user: name="{{users}}" comment="My User {{users}}"
+    with_items:
+      - "{{ users }}"
